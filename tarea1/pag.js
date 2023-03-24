@@ -1,27 +1,30 @@
-var http = require('http'),
-fs = require('fs');
+var http = require("http");
+var fs = require("fs");
 
-http.createServer(function(solicitud,respuesta){
+http.createServer(function(request, response){
 
-    const { url } = solicitud;
-    if (url === '/') {
-        template='index.html'
-      }
-    else if(url === '/nosotros') {
-        template='nosotros.html'
-      }
-    else if(url === '/servicios') {
-        template='servicios.html'
-      }
-    else if(url === '/clientes') {
-        template='clientes.html'
-      }
-    else if(url === '/contacto') {
-        template='contacto.html'
-      }
+    response.writeHead(200, {'Content-Type': 'text/html'});
 
-    fs.readFile('templates/'+template,function(error,html) {
-    respuesta.write(html);
-    respuesta.end();
+    switch(request.url){
+        case '/':
+            paginas = "index.html";
+            break;
+        case '/nosotros':
+            paginas = "nosotros.html";
+            break;
+        case '/servicios':
+            paginas = "servicios.html";
+            break;
+        case '/clientes':
+            paginas = "clientes.html";
+            break;
+        case '/contacto':
+            paginas = "contacto.html";
+            break;
+    }
+
+    fs.readFile("./"+paginas, function(error,data){
+        response.write(data);
+        response.end();
     });
-    }).listen(8080);
+}).listen(8080);

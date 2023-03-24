@@ -96,6 +96,47 @@ nav {
   }
 }
 
+footer {
+background-color: #000000;
+padding: 10px;
+font-size: 14px;
+margin-bottom: 0%;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo img {
+height: 50px;
+width: auto;
+}
+
+.links ul {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 0;
+padding-right: 50px;
+}
+
+.links li {
+margin-left: 20px;
+}
+
+.links a {
+color: #ffffff;
+text-decoration: none;
+}
+
+.links a:hover {
+color: #666;
+}
+
   
 </style>
 <body>
@@ -107,13 +148,32 @@ nav {
     </div>
     <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Clientes</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/clientes">Clientes</a></li>
+          <li><a href="/contacto">Contacto</a></li>
         </ul>
       </nav>
+      <div class="cuerpo" style="height: 500px;">
+
+      </div>
+
+      <footer>
+        <div class="footer-container">
+          <div class="logo">
+            <img src="https://1000marcas.net/wp-content/uploads/2022/06/ACME-logo.png" alt="Logo de la empresa">
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="/nosotros">Nosotros</a></li>
+              <li><a href="/servicios">Servicios</a></li>
+              <li><a href="/clientes">Clientes</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
       
 </body>
 </html>
