@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme</title>
+</head>
+<style>
+    body{
+        margin: 0%;
+    }
+    header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: -1px;
+    font-size: 15px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+    }
+  }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b01b1f;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+nav {
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 18px;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .nav-links a {
+    padding: 10px;
+    border-top: 1px solid #fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    font-size: 24px;
+  }
+}
+
+  
+</style>
+<body>
+    <header>
+        <h1>Adrian Najarro</h1>
+    </header>
+    <div class="logo-container">
+        <img src="https://ep00.epimg.net/verne/imagenes/2015/07/31/articulo/1438353048_228377_1438943170_noticia_normal.jpg" alt="">
+    </div>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Clientes</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      
+</body>
+</html>
